@@ -1,8 +1,7 @@
-package main
+package ontologylookup
 
 import (
 	"encoding/json"
-	"flag"
 	"fmt"
 	"os"
 
@@ -52,13 +51,4 @@ func FetchOntologyDetails(ontologyID string, format string) error {
 	fmt.Printf("Status: %s\n", details.Status)
 
 	return nil
-}
-
-func main() {
-	ontologyID := flag.String("ontologyID", "efo", "The ID of the ontology to fetch details for")
-	format := flag.String("format", "json", "The format to return the ontology details in")
-
-	flag.Parse()
-
-	FetchOntologyDetails(*ontologyID, *format)
 }
