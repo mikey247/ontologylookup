@@ -15,7 +15,7 @@ go.mod main.go result.json service/ ontology_lookup.go
 4. Run the `main.go` file with the ontologyID and fomat flags:
 
 ```sh
-go run main.go -ontologyID=efo -format=machine
+ go run cmd/ontologylookup/main.go -ontologyID=efo -format=machine
 ```
 
 ## Functionality
