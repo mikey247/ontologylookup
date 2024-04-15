@@ -9,11 +9,11 @@ import (
 )
 
 func FetchOntologyDetails(ontologyID string, format string) error {
-	ol := service.OntologyLookup{
+	olService := service.OntologyLookup{
 		BaseURL: "https://www.ebi.ac.uk/ols4/api/ontologies/",
 	}
 
-	details, err := ol.FetchOntologyDetails(ontologyID)
+	details, err := olService.FetchOntologyDetails(ontologyID)
 
 	if err != nil {
 		fmt.Printf("Error fetching ontology details: %v\n", err)

@@ -12,11 +12,13 @@ go.mod main.go result.json service/ ontology_lookup.go
 1. Ensure you have Go installed on your machine.
 2. Clone this repository.
 3. Navigate to the project directory.
-4. Run the `main.go` file with the ontologyID and fomat flags:
+4. Run the `main.go` file with the ontologyID and format flags:
 
 ```sh
  go run cmd/ontologylookup/main.go -ontologyID=efo -format=machine
 ```
+
+The package is also published pkg.go.dev on https://pkg.go.dev/github.com/mikey247/ontologylookup
 
 ## Functionality
 The main function of this project is defined in the FetchOntologyDetails function in the main.go file. This function fetches ontology details for a given ontology ID and format. If the format is "machine", the details are written to a result.json file. Otherwise, the details are printed to the console.
